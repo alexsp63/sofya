@@ -344,7 +344,7 @@ def parsing(now_tp, now_plus_1_tp, now_plus_2_tp, now_plus_3_tp, now_plus_4_tp, 
         to_ret = result
     return to_ret
 
-token = 'f325c7287974f63be58c9cacffd5e99fde9cce5f73dcfc440625b67c802ccfa33c909528498b458c7b4ff'
+token = ''
 vk_session = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
