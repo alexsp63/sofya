@@ -344,7 +344,7 @@ def parsing(now_tp, now_plus_1_tp, now_plus_2_tp, now_plus_3_tp, now_plus_4_tp, 
         to_ret = result
     return to_ret
 
-token = ''
+token = 'f325c7287974f63be58c9cacffd5e99fde9cce5f73dcfc440625b67c802ccfa33c909528498b458c7b4ff'
 vk_session = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
@@ -477,6 +477,7 @@ for event in longpoll.listen():
                 vk.messages.send(
                     user_id = event.user_id,
                     message = 'Простите, но я ещё так молод, ещё не выучил такой команды&#128547;',
+                    keyboard = open('keyboard1.json', 'r', encoding="UTF-8").read(),
                     random_id = random.randint(0, 2048)
                 )
 
