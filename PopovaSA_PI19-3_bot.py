@@ -349,10 +349,10 @@ vk_session = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
 k = 0      #это значит, что пользователь не выбрал дату, а значит, ещё не готов выбрать фильм
-now = datetime.now() + timedelta(hours = 3)  #я хочу, чтоб у меня были кнопочки на 5 дней вперёд, включая сегодня
+now = datetime.now()                         #я хочу, чтоб у меня были кнопочки на 5 дней вперёд, включая сегодня
 plus_days = timedelta(days = 1)              #то есть получатся дни от сегодня до сегодня + 4
-now_plus_1 = now + plus_days                 #а хероку живёт по часовому поясу, который на 3 часа меньше, поэтому я там прибавила их
-now_plus_2 = now_plus_1 + plus_days          #так, чтобы по-человечески было
+now_plus_1 = now + plus_days                 
+now_plus_2 = now_plus_1 + plus_days         
 now_plus_3 = now_plus_2 + plus_days
 now_plus_4 = now_plus_3 + plus_days
 now_tp = now.strftime("%d.%m")              #мне удобнее хранить их именно так, ведь мне с ними ещё работать
